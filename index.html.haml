@@ -1,0 +1,57 @@
+!!! Strict
+%html{xmlns: "http://www.w3.org/1999/xhtml", lang: "fr", "xml:lang" => "fr"}
+  %head
+    %meta{"http-equiv" => "Content-Type", content: "text/html; charset=utf-8"}
+    %meta{name: "title", content: "montagne-neige"}
+    %meta{name: "autor", content: "Gontran BROWN & Soumia ADJIR"}
+    %meta{name: "description", content: "Une avanche d'info sur les montagnes"}
+    %meta{name: "keybords", content:""}
+
+    %link{rel: "stylesheet", href: "css/css.css", type: "text/css"}
+
+    %script{src: "javascript/jquery.min.js", type:"text/javascript", charset: "utf-8"}
+    %script{src: "javascript/background.js", type:"text/javascript", charset: "utf-8"}
+
+  %body
+    #page
+      #header
+        %div.encadrement
+          %form#formulaire{action: "identification.php", methode: "post"}
+            %input#ok{type:"image", src:"images/go.png", title:"connextion"}
+            %span
+              Email :
+              %input.champs{type:"text", name:"pseudo", onblur:"restaurer(this, 'Pseudo')", onclick:"effacer(this, 'Pseudo')"}
+
+            %span
+              Mot de passe :
+              %input.champs{type:"text", name:"mot de passe", onblure:"restaurer(this,'motdepasse')", onclick: "effacer(this, 'motdepasse')"}
+
+
+          #inscription
+            %span
+              %a{href:"inscription.php"}
+                Inscription |
+            %span
+              %a{href:"perdumdp.php"}
+                | Mot de passe perdu !
+
+        .logo
+
+      .site
+        #menu
+          %ul
+            %li
+              %a{href:"accueil.php", class: "menu acceuil"}Accueil
+            %li
+              %a{href:"meteo.php", class: "meteo menu"}Météo
+            %li
+              %a{href:"contact.php", class: "menu contact"}Contact
+            %li
+              %a{href:"liens_util.php", class: "menu links"}Liens util
+
+        #content
+          ici c'est le content la ou ce chargera les pages
+
+        #footer
+          ©2012 - Gontran Brown
+
